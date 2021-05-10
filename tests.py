@@ -7,6 +7,10 @@ class TestCase(unittest.TestCase):
         pwd = ""
         self.assertFalse(check_pwd(pwd))
 
+    def test2(self):
+        pwd = "0"
+        self.assertFalse(check_pwd(pwd))
+
 
 if __name__ == '__main__':
     unittest.main()
