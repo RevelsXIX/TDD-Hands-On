@@ -8,6 +8,15 @@ def check_pwd(pwd):
             return False
         if not any(p.isupper() for p in pwd):
             return False
+        symbols = ["~", "`", "!", "@", "#", "$","%",
+                   "^", "&", "*", "(", ")", "_", "+",
+                   "-", "="]
+        symExists = 0
+        for p in pwd:
+            if p in symbols:
+                symExists = symExists + 1
+        if symExists < 1:
+            return False
         return True
     else:
         return False
