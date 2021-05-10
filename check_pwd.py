@@ -1,2 +1,4 @@
 def check_pwd(pwd):
-    return True
+    if pwd:
+        return True
+    return False
