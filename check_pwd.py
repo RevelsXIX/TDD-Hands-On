@@ -17,6 +17,12 @@ def check_pwd(pwd):
                 symExists = symExists + 1
         if symExists < 1:
             return False
+        for p in pwd:
+            if not p.isdigit() and not p.islower() and not p.isupper():
+                if p not in symbols:
+                    return False
+                else:
+                    pass
         return True
     else:
         return False
