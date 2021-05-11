@@ -31,6 +31,10 @@ class TestCase(unittest.TestCase):
         pwd = "AaAaAaAa0"
         self.assertFalse(check_pwd(pwd))
 
+    def test8(self):
+        pwd = "aA098!&%;"
+        self.assertFalse(check_pwd(pwd))
+
 
 if __name__ == '__main__':
     unittest.main()
